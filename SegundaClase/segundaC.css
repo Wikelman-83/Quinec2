@@ -1,0 +1,60 @@
+body {
+    background: #1d1e22;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dashboard {
+    margin: 0 auto;
+    max-width: 1360px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: .75rem;
+    background: rgb(77,85,119) url("https://assets.codepen.io/1819442/dark-city2.jpg") center/cover no-repeat;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .dashboard > div {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: #ffffffdd;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    flex: 1 1 calc(33% - 2rem);
+    min-width: 280px;
+    box-sizing: border-box;
+  }
+
+  h2, h3 {
+    margin-top: 0;
+    color: #ffffff;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+  }
+
+  table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  th, td {
+    padding: 0.5rem;
+    text-align: left;
+    color: #fff;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  ul li {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }

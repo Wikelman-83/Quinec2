@@ -1,0 +1,143 @@
+body {
+  background: #1d1e22;                             /* Establece un fondo oscuro para toda la página */
+  font-family: 'Inter', sans-serif;                /* Define la fuente principal del texto como 'Inter' o sans-serif */
+}
+
+
+/* Estructura general */
+#menu-left, #menu-right {
+  display: inline-block;
+  vertical-align: top;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+centro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+/* Menú lateral izquierdo */
+#menu-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu-left ul li {
+  position: relative;
+}
+
+#menu-left > ul > li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#menu-left ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background 0.3s;
+}
+
+#menu-left ul li a:hover {
+  background: #333;
+  border-radius: 4px;
+}
+
+/* Submenús desplegables */
+#menu-left ul li ul.menus {
+  display: none;
+  position: absolute;
+  background: #222;
+  padding: 0;
+  min-width: 150px;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+}
+
+#menu-left ul li:hover ul.menus {
+  display: block;
+}
+
+#menu-left ul li ul.menus li {
+  display: block;
+}
+
+/* Checkbox oculto (para futuro uso de toggle móvil si se desea) */
+#menu-left input[type="checkbox"] {
+  display: none;
+}
+
+/* Campo de búsqueda (lado derecho) */
+#menu-right #search input[type="text"] {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 14px;
+}
+
+/* Contenedor para aplicar formato específico si deseas más adelante */
+#formato1 {
+  padding: 1rem;
+  background: #f2f2f2;
+}
+
+.dashboard {
+  margin: 0 auto;                                  /* Centra horizontalmente el contenedor .dashboard */
+  max-width: 1360px;                               /* Limita el ancho máximo del dashboard a 1360px */
+  display: flex;                                   /* Activa Flexbox para organizar elementos hijos en fila */
+  border-radius: .75rem;                           /* Redondea las esquinas del contenedor */
+  background:                                       /* Define el fondo del dashboard con: */
+    rgb(77,85,119)                                  /* - un color de respaldo si la imagen no carga */
+    url("https://assets.codepen.io/1819442/dark-city2.jpg") /* - una imagen de fondo */
+    center/cover no-repeat;                        /* - centra la imagen, la ajusta para cubrir el área y no repetirla */
+}
+
+/* Estilo para todas las tarjetas (paneles) dentro de .dashboard */
+.estudiante:first-child {
+  backdrop-filter: blur(16px) saturate(180%);      /* Aplica desenfoque y saturación al fondo detrás del panel (moderno) */
+  -webkit-backdrop-filter: blur(16px) saturate(180%); /* Versión para navegadores WebKit (Safari, Chrome) */
+  background-color: rgba(17, 25, 40, 0.65);         /* Fondo semitransparente para oscurecer el fondo y mejorar legibilidad */
+  border: 1px solid rgba(255, 255, 255, 0.125);     /* Borde claro y sutil alrededor del panel */
+  color: #ffffffdd;                                /* Texto blanco con un poco de transparencia */
+  border-radius: 1.25rem;                          /* Redondea las esquinas de los paneles */
+  padding: 1rem;                                    /* Espaciado interno (relleno) de 1 unidad rem */
+  margin: 1rem;                                     /* Espaciado externo (separación entre paneles) */
+  font-size: 1.15em;                                /* Aumenta ligeramente el tamaño del texto */
+  line-height: 1.5em;                               /* Ajusta la altura entre líneas para mejorar legibilidad */
+}
+
+.estudiante:last-child {
+  backdrop-filter: blur(16px) saturate(180%);      /* Aplica desenfoque y saturación al fondo detrás del panel (moderno) */
+  -webkit-backdrop-filter: blur(16px) saturate(180%); /* Versión para navegadores WebKit (Safari, Chrome) */
+  background-color: rgba(17, 25, 40, 0.65);         /* Fondo semitransparente para oscurecer el fondo y mejorar legibilidad */
+  border: 1px solid rgba(255, 255, 255, 0.125);     /* Borde claro y sutil alrededor del panel */
+  color: #ffffffdd;                                /* Texto blanco con un poco de transparencia */
+  border-radius: 1.25rem;                          /* Redondea las esquinas de los paneles */
+  padding: 1rem;                                    /* Espaciado interno (relleno) de 1 unidad rem */
+  margin: 1rem;                                     /* Espaciado externo (separación entre paneles) */
+  font-size: 1.15em;                                /* Aumenta ligeramente el tamaño del texto */
+  line-height: 1.5em;                               /* Ajusta la altura entre líneas para mejorar legibilidad */
+}
+
+/* Distribución de los anchos de los dos paneles */
+.estudiante:first-child {
+  width: 70%;                                       /* El primer panel ocupará el 30% del ancho del .dashboard */
+}
+
+.estudiante:last-child {
+  width: 30%;                                       /* El segundo panel ocupará el 70% del ancho del .dashboard */
+}
+
+.imagen-reducida {
+  width: 200px;
+  height: auto; /* mantiene la proporción */
+}

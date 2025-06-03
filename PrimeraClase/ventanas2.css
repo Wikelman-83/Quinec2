@@ -1,0 +1,333 @@
+body {
+
+/* Menu
+----------------------------------------------- */
+
+#menu {
+    background: #000F22; /* fundo do menu */
+    color: #FFF; /* cor da fonte do menu */
+    height: 50px; 
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+#menu-left {
+    float: left;
+    width: 100%;
+    max-width: 700px;
+}
+
+#menu-right {
+    float: right;
+    width: 100%;
+    max-width: 300px;
+    text-align: right;
+}
+
+#menu ul, #menu li {
+    text-transform: uppercase;  /* Todas as fontes maiúsculas, se não quiser, apague esta linha */
+    margin: 0 auto;
+    padding: 0 0;
+    list-style: none;
+}
+
+#menu ul {
+    width: 100%;
+}
+
+#menu li {
+    float: left;
+    display: inline;
+    position: relative;
+    font-weight: 700;
+}
+
+#menu a {
+    display: block;
+    line-height: 50px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#menu li a:hover {
+    color: #fffFFF;  /* Cor do link no hover */
+    background: #50A267;  /* Fundo do link no hover */
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+#menu-left input {
+    display: none;
+    margin: 0 0;
+    padding: 0 0;
+    width: 80px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#menu label {
+    background: url("http://i.imgur.com/Cx8HQMd.png") center no-repeat;
+    -moz-background-size: auto 50%;
+    -webkit-background-size: auto 50%;
+    background-size: auto 50%;
+    display: none;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#menu ul.menus {
+    padding-top: 5px;
+    height: auto;
+    overflow: hidden;
+    width: 200px;
+    background: rgba(255,255,255,0.95);
+    position: absolute;
+    z-index: 99;
+    display: none;
+    box-shadow: 0 0 1px rgba(0,0,0,0.2);
+}
+
+#menu ul.menus li {
+    display: block;
+    width: 100%;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-shadow: none;
+}
+
+#menu ul.menus a {
+    color: #000; 
+    line-height: 35px;
+}
+
+#menu li:hover ul.menus {
+    display: block;
+}
+
+#menu ul.menus a:hover {
+    background: #5d8d59;  /* Fundo dos link das subabas no hover */
+    color: #fff;  /* Cor dos link das subabas no hover */
+    padding-left: 20px;
+}
+
+#search {
+    margin-top: 0px;
+    color: #fff !important;
+}
+#search input[type="text"] {
+    background: url("http://i.imgur.com/WsHNC7P.png") no-repeat 20px 15px;
+    border: none;
+    color: #fff !important;
+    font-size: 13px;
+    width: 0px;
+    height: 38px;
+    padding: 6px 5px 6px 50px;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    cursor: pointer;
+}
+#search input[type="text"]:focus {
+    color: #fff !important;
+    width: 245px;
+    background: url("http://i.imgur.com/WsHNC7P.png") no-repeat  20px 15px rgba(0,0,0,0.2);
+    outline: none;
+    cursor: text;
+}
+
+centro {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Menu Responsivo
+----------------------------------------------- */
+
+@media screen and (max-width: 1000px){
+
+.menunope {
+    display: none;
+}
+
+#menu {
+    position: fixed;
+}
+
+#menu ul {
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: 1000px;
+    display: none
+}
+
+#menu ul.menus {
+    width: 100%;
+    position: static;
+    padding-left: 20px;
+}
+
+#menu li {
+    display: block;
+    float: none;
+    width: auto;
+    font-weight: 700;
+    background: #0e0e0e;
+}
+
+#menu-left input, #menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#menu-left input {
+    z-index:4;
+}
+
+#menu-left input:checked + label {
+    background: url("http://i.imgur.com/yNRYwBD.png") no-repeat center;
+    -moz-background-size: auto 50%;
+    -webkit-background-size: auto 50%;
+    background-size: auto 50%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#menu-left input:checked ~ ul {
+    display:block;
+}
+
+#menu ul.menus {
+    width: 100%;
+    background: #111;
+    z-index: 99;
+    display: none;
+    box-shadow: 0 0 1px rgba(0,0,0,0.2);
+    margin-top: -5px;
+    margin-left: -20px;
+    padding-top: 0;
+    border:none;
+}
+
+#menu ul.menus li {
+    display: block;
+    width: 100%;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-shadow: none;
+    background: rgba(0,0,0,0.5);
+}
+
+#menu ul.menus a {
+    color: #ccc; 
+    line-height: 35px;
+}
+
+#menu li:hover ul.menus {
+    display: block;
+}
+
+#menu ul.menus a:hover {
+    background: #5d8d59;  /* Fundo do link das subabas no hover */
+    color: #fff;  /* Cor do link das subabas no hover */
+    padding-left: 20px;
+}
+
+}
+----------------------------------------------- */
+
+
+
+  background: #1d1e22; /* Establece el color de fondo de toda la página a un tono oscuro #1d1e22 */
+  .dashboard {
+    margin: 0 auto; /* Centra horizontalmente el contenedor .dashboard */
+    max-width: 1215px; /* Define un ancho máximo inicial de 1215px para el dashboard */
+    display: flex; /* Activa el modelo de caja flexible para sus elementos hijos */
+     /* Permite que los elementos flex se envuelvan en varias filas */
+    border-radius: .75rem; /* Redondea las esquinas del contenedor con un radio de 0.75rem */
+    max-width: 1360px; /* Sobrescribe el ancho máximo a 1360px */
+    background: rgb(77,85,119); /* Color de fondo de respaldo (fallback) en caso de que no cargue la imagen */
+    background-image: url("https://assets.codepen.io/1819442/dark-city2.jpg"); /* Imagen de fondo para el dashboard */
+    background-size: cover; /* Escala la imagen para cubrir todo el área del contenedor */
+    font-family: 'Inter', sans-serif; /* Define la familia de fuente principal para el dashboard */
+
+    > div {
+      backdrop-filter: blur(16px) saturate(180%); /* Aplica un desenfoque y saturación al fondo detrás del elemento */
+      -webkit-backdrop-filter: blur(16px) saturate(180%); /* Prefijo para navegadores WebKit (Safari) */
+      background-color: rgba(17, 25, 40, 0.65); /* Fondo semitransparente para mejorar la legibilidad */
+      border: 1px solid rgba(255, 255, 255, 0.125); /* Borde sutil blanco con transparencia */
+      color: #ffffffdd; /* Color de texto blanco con un poco de transparencia */
+      flex: 1 1 calc(10% - 2rem); /* Permite crecer y encoger automáticamente según el espacio disponible */
+      border-radius: 1.25rem; /* Esquinas más redondeadas para los contenedores internos */
+      padding: 1rem; /* Espacio interno uniforme de 1rem */
+      margin: 1rem; /* Espacio externo de 1rem alrededor de cada contenedor */
+      font-size: 1.15em; /* Aumenta el tamaño de fuente un 15% respecto al padre */
+      line-height: 1.5em; /* Altura de línea de 1.5 veces el tamaño de fuente para mejor lectura */
+
+      h2 {
+        font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Fuente específica para encabezados */
+        font-size: 2.5rem; /* Tamaño grande para encabezados h2 */
+      }
+
+      th, td {
+        text-align: left; /* Alinea el texto de celdas y encabezados a la izquierda */
+        padding-left: .5rem; /* Espacio a la izquierda dentro de celdas de tablas */
+      }
+
+      ul {
+        margin-top: .75rem; /* Espacio encima de listas no ordenadas */
+      }
+    }
+
+    .profile {
+      text-align: center; /* Centra el contenido de texto en la sección de perfil */
+
+      h2 {
+        font-size: 4rem; /* Encabezado principal extra grande para perfil */
+      }
+
+      p {       
+        font-size: 2.5rem; /* Tamaño de párrafo destacado */
+        letter-spacing: -2px; /* Reduce el espaciado entre letras para estilo */
+      }
+    }
+
+    .activity-feed {
+      ul {
+        padding: 0; /* Elimina el relleno predeterminado de la lista */
+        border-top: .1rem solid #ccc; /* Línea superior gris clara para separar la lista */
+
+        li {
+          min-height: 2rem; /* Altura mínima para cada elemento de la lista */
+          margin: .5rem 0; /* Espacio vertical entre elementos */
+          border-bottom: .1rem solid #ccc; /* Línea inferior gris clara en cada elemento */
+          padding: 1rem 1.5rem; /* Relleno interno en elementos de la lista */
+          display: flex; /* Usa flexbox para alinear contenido dentro del ítem */
+          align-items: center; /* Centra verticalmente los elementos del ítem */
+        }
+      }     
+    }
+  }
+}
